@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Your Typing Speed</h1>
+        <div class="personal-best">
+            <p>Best Speed: <span id="personal-best">0</span> WPM</p>
+        </div>
+        
+        <div class="time-options">
+            <button class="time-btn" data-time="60">1 Minute</button>
+            <button class="time-btn" data-time="120">2 Minutes</button>
+            <button class="time-btn" data-time="180">3 Minutes</button>
+        </div>
+
+        <div class="correction-lock">
+            <label class="switch">
+                <input type="checkbox" id="correction-lock">
+                <span class="slider round"></span>
+            </label>
+            <span class="lock-text">Correction Lock</span>
+        </div>
+
+        <div class="timer" id="timer">60s</div>
+        
+        <div class="wrapper">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="content-box">
+                <div class="typing-text">
+                    <p id="paragraph"></p>
+                </div>
+                <textarea id="input-field" placeholder="Start typing when you're ready..."></textarea>
+            </div>
+            
+            <div class="results" id="results">
+                <ul>
+                    <li>
+                        <p>WPM</p>
+                        <span id="wpm">0</span>
+                    </li>
+                    <li>
+                        <p>Accuracy</p>
+                        <span id="accuracy">0%</span>
+                    </li>
+                    <li>
+                        <p>CPM</p>
+                        <span id="cpm">0</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <button id="try-again">Try Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
